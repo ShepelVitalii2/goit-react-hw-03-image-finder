@@ -245,3 +245,8 @@ ul {
   margin-top: 100px;
   margin-bottom: 50px;
 }
+
+.Wrapper {
+  display: flex;
+  justify-content: center;
+}

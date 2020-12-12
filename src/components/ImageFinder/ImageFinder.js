@@ -134,8 +134,7 @@ class ImageFinder extends Component {
       <div>
         <Searchbar onSubmit={this.handleFormSubmit} />
         <ToastContainer />
-        {isLoading && <LoaderSpinner />}
-
+        <div className="Wrapper">{isLoading && <LoaderSpinner />}</div>
         <authContext.Provider value={handleImageClick}>
           {pictureName && <ImageGallery gallery={gallery} />}
         </authContext.Provider>
