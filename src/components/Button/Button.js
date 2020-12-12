@@ -2,7 +2,7 @@ import React from 'react';
 
 function onBtnClick({ onClick }) {
   return (
-    <button type="button" onClick={onClick} className="Button">
+    <button type="button" className="Button" onClick={onClick}>
       Загрузить еще
     </button>
   );

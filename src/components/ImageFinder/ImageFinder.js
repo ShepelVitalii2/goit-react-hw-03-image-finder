@@ -7,6 +7,7 @@ import OnLoadMoreBtnClick from '../Button';
 import LoaderSpinner from '../Loader/Loader';
 import authContext from '../Context/Context';
 import Modal from '../Modal/Modal';
+// import Section from '../../Section';
 // import { createContext } from 'react';
 
 class ImageFinder extends Component {
@@ -148,10 +149,11 @@ class ImageFinder extends Component {
             ></img>
           </Modal>
         )}
-
-        {pictureName && gallery.length > 11 && (
-          <OnLoadMoreBtnClick onClick={this.fetchPictures} />
-        )}
+        <div className="BtnWrapper">
+          {pictureName && gallery.length > 11 && (
+            <OnLoadMoreBtnClick onClick={this.fetchPictures} />
+          )}
+        </div>
       </div>
     );
   }
