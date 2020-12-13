@@ -7,8 +7,6 @@ import OnLoadMoreBtnClick from '../Button';
 import LoaderSpinner from '../Loader/Loader';
 import authContext from '../Context/Context';
 import Modal from '../Modal/Modal';
-// import Section from '../../Section';
-// import { createContext } from 'react';
 
 class ImageFinder extends Component {
   state = {
@@ -65,7 +63,6 @@ class ImageFinder extends Component {
 
   handleFormSubmit = pictureName => {
     this.setState({ pictureName });
-    // console.log(pictureName);
   };
 
   handleSubmit = query => {
@@ -93,23 +90,6 @@ class ImageFinder extends Component {
     }
   };
 
-  hadleImageClick = e => {
-    if (e.target.nodeName !== 'IMG') {
-      return;
-    }
-
-    e.preventDefault();
-
-    const fullImgLink = e.target.getAttribute('data-large');
-    const lowSrc = e.target.getAttribute('src');
-
-    this.setState({
-      selectedImgURL: fullImgLink,
-      selectedLowQImgUrl: lowSrc,
-      isModalOpen: true,
-    });
-  };
-
   toggleModal = () => {
     this.setState({
       isModalOpen: !this.state.isModalOpen,
@@ -126,7 +106,6 @@ class ImageFinder extends Component {
       pictureName,
       handleImageClick,
       isModalOpen,
-      selectedLowQImgUrl,
       selectedImgURL,
       isLoading,
     } = this.state;
@@ -141,11 +120,7 @@ class ImageFinder extends Component {
 
         {isModalOpen && (
           <Modal onClose={this.toggleModal}>
-            <img
-              src={selectedLowQImgUrl}
-              data-src={selectedImgURL}
-              alt="fullsizeImage"
-            ></img>
+            <img src={selectedImgURL} alt="fullsizeImage"></img>
           </Modal>
         )}
         <div className="BtnWrapper">

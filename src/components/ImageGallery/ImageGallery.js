@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 
 export default function ImageGallery({ gallery }) {
@@ -8,3 +9,6 @@ export default function ImageGallery({ gallery }) {
     </ul>
   );
 }
+ImageGallery.propTypes = {
+  gallery: PropTypes.array.isRequired,
+};

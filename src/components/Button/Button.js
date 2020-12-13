@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function onBtnClick({ onClick }) {
   return (
@@ -7,5 +8,8 @@ function onBtnClick({ onClick }) {
     </button>
   );
 }
+onBtnClick.propTypes = {
+  onClick: PropTypes.func.isRequired,
+};
 
 export default onBtnClick;

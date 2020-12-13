@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import authContext from '../Context/Context';
 
 export default function ImageGalleryItem({
@@ -12,8 +13,8 @@ export default function ImageGalleryItem({
       <authContext.Consumer>
         {hadleImageClick => (
           <img
-            src={previewURL}
-            data-src={webformatURL}
+            src={webformatURL}
+            data-src={previewURL}
             alt="searchedPicture"
             data-large={largeImageURL}
             className="ImageGalleryItem-image lazyload blur-up"
@@ -24,3 +25,10 @@ export default function ImageGalleryItem({
     </li>
   );
 }
+
+ImageGalleryItem.propTypes = {
+  id: PropTypes.number.isRequired,
+  webformatURL: PropTypes.string.isRequired,
+  largeImageURL: PropTypes.string.isRequired,
+  previewURL: PropTypes.string.isRequired,
+};
