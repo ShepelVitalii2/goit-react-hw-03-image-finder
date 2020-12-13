@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { ToastContainer } from 'react-toastify';
 import Searchbar from '../Searchbar';
 import apiService from '../ApiService';
-import ImageGallery from '../ImageGallery/ImageGallery';
+import ImageGallery from '../ImageGallery';
 import OnLoadMoreBtnClick from '../Button';
-import LoaderSpinner from '../Loader/Loader';
-import authContext from '../Context/Context';
-import Modal from '../Modal/Modal';
+import LoaderSpinner from '../Loader';
+import authContext from '../Context';
+import Modal from '../Modal';
+import StartPage from '../StartPage';
 
 class ImageFinder extends Component {
   state = {
@@ -112,6 +113,7 @@ class ImageFinder extends Component {
     return (
       <div>
         <Searchbar onSubmit={this.handleFormSubmit} />
+        {gallery.length === 0 && <StartPage />}
         <ToastContainer />
         <div className="Wrapper">{isLoading && <LoaderSpinner />}</div>
         <authContext.Provider value={handleImageClick}>

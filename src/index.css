@@ -251,3 +251,8 @@ ul {
   display: flex;
   justify-content: center;
 }
+
+.StartPage-header {
+  text-align: center;
+  font-size: 30px;
+}
