@@ -19,7 +19,7 @@ class ImageFinder extends Component {
     gallery: [],
     isModalOpen: false,
     selectedImgURL: '',
-    selectedLowQImgUrl: '',
+
     handleImageClick: e => {
       if (e.target.nodeName !== 'IMG') {
         return;

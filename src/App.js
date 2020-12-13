@@ -1,6 +1,6 @@
 // import react from 'react';
 import Section from './Section';
-import ImageFinder from './components/ImageFinder/ImageFinder';
+import ImageFinder from './components/ImageFinder';
 
 export default function App() {
   return (

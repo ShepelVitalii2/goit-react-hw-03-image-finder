@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import authContext from '../Context/Context';
+import authContext from '../Context';
 
 export default function ImageGalleryItem({
   id,
